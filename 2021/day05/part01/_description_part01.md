@@ -44,4 +44,4 @@ To avoid the most dangerous areas, you need to determine the number of points wh
 
 Consider only horizontal and vertical lines. At how many points do at least two lines overlap?
 
-> Answer: 
+> Answer: 4993

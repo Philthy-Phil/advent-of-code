@@ -35,6 +35,13 @@ class Line {
                 this.points.push(new Point(segment));
             }
         }
+
+        if (possibleCoordsForX.length > 0 && possibleCoordsForY.length > 0) {
+            for (let i = 0; i < possibleCoordsForX.length; i++) {
+                let segment = possibleCoordsForX[i] + ',' + possibleCoordsForY[i]
+                this.points.push(new Point(segment));
+            }
+        }
     }
     
     createPossiblePointCoords(a, b) {
@@ -61,7 +68,6 @@ class Line {
         }
         return coordsFor;
     }
-
 }
 
 class Point {
@@ -86,7 +92,7 @@ function checkForOverlappingPoints(board) {
 }
 
 
-function part1(){
+function part2(){
 
     const lines = input.map(segment => new Line(segment));
 
@@ -109,6 +115,8 @@ function part1(){
 
     let board = Array(maxY+1).fill(0).map(x => Array(maxX+1).fill(0));
     
+    // console.log(lines[0])
+
     lines.forEach(line => {
         line.points.forEach(point => {
             for (let i = 0; i <= maxY; i++) {
@@ -122,7 +130,7 @@ function part1(){
     });
     
     let overlappingPoints = checkForOverlappingPoints(board);
-    console.log('part01 -> ', overlappingPoints);
+    console.log('part02 -> ', overlappingPoints);
 }
 
-part1();
+part2();
