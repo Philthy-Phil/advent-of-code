@@ -17,7 +17,7 @@ let _input = ir
     return { signalPatterns, outputValues };
   });
 
-function part1(input) {
+function part2(input) {
 
   // 0 => 6
   // 1 => 2 <- X
@@ -37,6 +37,6 @@ function part1(input) {
     count += matches.length;
   }
 
-  console.log("part01 -> ", count);
+  console.log("part02 -> ", count);
 }
-part1(_input);
+part2(_input);
